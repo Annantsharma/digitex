@@ -10,19 +10,19 @@
 </head>
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark py-1" style="background: linear-gradient(90deg, #232b38 60%, #00bcd4 100%) !important; box-shadow: 0 2px 12px rgba(35,43,56,0.18); min-height:70px;">
-    <div class="container align-items-end" style="min-height:70px;">
+  <nav class="navbar navbar-dark py-1" style="background: linear-gradient(90deg, #232b38 60%, #00bcd4 100%) !important; box-shadow: 0 2px 12px rgba(35,43,56,0.18); min-height:70px;">
+    <div class="container align-items-end d-flex justify-content-start" style="min-height:70px;">
+      <button class="navbar-toggler me-3" type="button" id="customNavToggler" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <a class="navbar-brand fw-bold d-flex align-items-end" href="index.html" style="font-size:2.1rem; height:70px;">
         <img src="images/logo.png" alt="Immentrix Logo" style="height:64px;width:140px;object-fit:contain;display:inline-block;vertical-align:bottom; margin-bottom:0;">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
+      <div class="collapse navbar-collapse" id="mainNav" style="display:none;">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Who we are</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">What we do</a></li>
           <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
           <li class="nav-item"><a class="nav-link" href="insights.html">Insights</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -30,6 +30,20 @@
       </div>
     </div>
   </nav>
+  <script>
+    // Custom toggler for showing/hiding nav tabs on all screen sizes
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggler = document.getElementById('customNavToggler');
+      var nav = document.getElementById('mainNav');
+      toggler.addEventListener('click', function() {
+        if (nav.style.display === 'none' || nav.style.display === '') {
+          nav.style.display = 'block';
+        } else {
+          nav.style.display = 'none';
+        }
+      });
+    });
+  </script>
   <!-- HERO BANNER CAROUSEL (Stylish with Captions) -->
   <section class="hero-section d-flex align-items-center text-white" style="min-height: 80vh; position: relative; overflow: hidden; background: linear-gradient(120deg, #232b38 60%, #00bcd4 100%);">
     <div class="container-fluid p-0">
@@ -199,6 +213,26 @@
               <a href="insights.html" class="btn btn-link p-0">Read More</a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT IMMENTRIX HIGHLIGHT SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="images/pexels-cottonbro-5483064.jpg" alt="IT Collaboration" class="img-fluid rounded-4 shadow-lg mb-3" style="max-height:340px;object-fit:cover;">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">Empowering Businesses with Smart IT Solutions</h2>
+          <p class="lead">At Immentrix, we believe technology should empower, not complicate. Our team delivers innovative, scalable, and secure IT solutions tailored to your business needs.</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Custom software & app development</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Cloud migration & digital transformation</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> IT consulting & ongoing support</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Secure, future-ready infrastructure</li>
+          </ul>
         </div>
       </div>
     </div>
