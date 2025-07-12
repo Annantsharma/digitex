@@ -9,17 +9,19 @@
 </head>
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(90deg, #232b38 60%, #00bcd4 100%) !important; box-shadow: 0 2px 12px rgba(35,43,56,0.18);">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Immentrix</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+  <nav class="navbar navbar-dark py-1" style="background: linear-gradient(90deg, #232b38 60%, #00bcd4 100%) !important; box-shadow: 0 2px 12px rgba(35,43,56,0.18); min-height:70px;">
+    <div class="container align-items-end d-flex justify-content-start" style="min-height:70px;">
+      <button class="navbar-toggler me-3" type="button" id="customNavToggler" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="mainNav">
+      <a class="navbar-brand fw-bold d-flex align-items-end" href="index.html" style="font-size:2.1rem; height:70px;">
+        <img src="images/logo.png" alt="Immentrix Logo" style="height:64px;width:140px;object-fit:contain;display:inline-block;vertical-align:bottom; margin-bottom:0;">
+      </a>
+      <div class="collapse navbar-collapse" id="mainNav" style="display:none;">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Who we are</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">What we do</a></li>
           <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
           <li class="nav-item"><a class="nav-link active" href="insights.html">Insights</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -27,6 +29,19 @@
       </div>
     </div>
   </nav>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggler = document.getElementById('customNavToggler');
+      var nav = document.getElementById('mainNav');
+      toggler.addEventListener('click', function() {
+        if (nav.style.display === 'none' || nav.style.display === '') {
+          nav.style.display = 'block';
+        } else {
+          nav.style.display = 'none';
+        }
+      });
+    });
+  </script>
   <section class="py-5 bg-light">
     <div class="container">
       <h1 class="display-4 fw-bold mb-4">Insights & Resources</h1>
