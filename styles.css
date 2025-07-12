@@ -53,6 +53,24 @@ body {
   z-index: 1000;
   display: flex;
 }
+.navbar .container {
+  align-items: center !important;
+  min-height: 70px;
+}
+.navbar-toggler {
+  align-self: center !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  background: none !important;
+  border: none;
+  color: #fff;
+  box-shadow: none;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 @media (max-width: 600px) {
   .navbar-nav {
     width: 70vw;
@@ -252,6 +270,8 @@ body {
     border: none;
     color: #fff;
     box-shadow: none;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
 @media (min-width: 992px) {
