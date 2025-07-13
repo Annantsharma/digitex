@@ -12,7 +12,7 @@ body {
   box-shadow: 0 2px 12px rgba(35,43,56,0.08);
 }
 .navbar .navbar-brand {
-  color: #ffb600 !important;
+  color: #36d0d2 !important;
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 1.5rem;
@@ -31,7 +31,7 @@ body {
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
   background: none;
-  color: #ffb600 !important;
+  color: #36d0d2 !important;
   box-shadow: none;
 }
 .navbar .nav-link::after {
@@ -122,7 +122,7 @@ body {
   text-shadow: 0 2px 12px rgba(35,43,56,0.18);
 }
 .hero-section .btn-warning {
-  background: #ffb600;
+  background:#36d0d2;
   color: #232b38 !important;
   border: none;
   font-weight: 600;
@@ -252,8 +252,35 @@ body {
   box-shadow: 0 6px 20px rgba(58,211,220,0.13);
 }
 
-/* Responsive */
+/* Industry Section */
+.industry-box {
+  min-height: 220px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.industry-box:hover {
+  box-shadow: 0 8px 32px rgba(0,188,212,0.18), 0 2px 12px rgba(35,43,56,0.12);
+  transform: translateY(-6px) scale(1.03);
+}
+.industry-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #fff 60%, #00bcd4 100%);
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.08);
+  font-size: 2.5rem;
+}
 @media (max-width: 767px) {
+  .industry-box {
+    min-height: 160px;
+  }
+  .industry-circle {
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
+  }
   .service-card, .why-card, .testimonial-card {
     margin-bottom: 1rem;
   }
@@ -290,20 +317,22 @@ body {
     left: auto;
     z-index: 1000;
     display: flex;
+    transform: none;
+    transition: none;
+    height: auto;
+    max-width: none;
+    min-width: 0;
   }
-  .navbar-toggler {
-    align-self: center !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    background: none !important;
-    border: none;
-    color: #fff;
+  .navbar-nav.show {
+    transform: none;
+    box-shadow: 0 2px 12px rgba(35,43,56,0.08);
+  }
+  .navbar-collapse {
+    position: static;
+    width: auto;
+    background: none;
     box-shadow: none;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    padding: 0;
   }
 }
 @media (min-width: 992px) {
@@ -321,4 +350,208 @@ body {
     margin-bottom: 0.5rem;
     display: flex;
   }
+}
+
+/* View All Industries Button */
+#viewAllIndustries {
+  background: #3ad3dc !important;
+  color: #232b38 !important;
+  border: 2px solid #3ad3dc !important;
+  font-weight: 700;
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px rgba(58,211,220,0.10);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+#viewAllIndustries:hover, #viewAllIndustries:focus {
+  background: #36d0d2 !important;
+  color: #232b38 !important;
+  border-color: #36d0d2 !important;
+  box-shadow: 0 6px 20px rgba(58,211,220,0.13);
+}
+
+/* Star background animation (moved from index.html) */
+#star-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.star-fly {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #00bcd4 60%, #232b38 100%);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: flyStarCircle linear infinite;
+}
+@keyframes flyStarCircle {
+  0% {
+    transform: rotate(0deg) translateX(0) scale(1);
+    opacity: 0.7;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) translateX(60px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+/* Oval 'Our Capabilities' Boxes */
+.card.h-100.shadow-sm {
+  border-radius: 50% !important;
+  aspect-ratio: 1/1;
+  min-width: 180px;
+  min-height: 180px;
+  background: linear-gradient(135deg, #e0f7fa 60%, #f8fafc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 4px 24px rgba(58,211,220,0.08);
+}
+@media (max-width: 767px) {
+  .card.h-100.shadow-sm {
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50% !important;
+  }
+}
+.card.h-100.shadow-sm .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Success Stories Images */
+.success-img {
+  width: 100%;
+  max-width: 320px;
+  height: 240px;
+  aspect-ratio: 16/11;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+@media (max-width: 767px) {
+  .success-img {
+    max-width: 100%;
+    height: 160px;
+    aspect-ratio: 16/11;
+  }
+}
+
+/* Success Stories images: increase height upward */
+.card.h-100.border-0.shadow-sm.align-items-center img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 280px !important;
+  object-fit: cover;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block;
+  border-radius: 0 !important;
+}
+.card.h-100.border-0.shadow-sm.align-items-center {
+  border-radius: 0 !important;
+}
+.card.h-100.border-0.shadow-sm.align-items-center .card-body {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  padding-top: 0.5rem !important;
+}
+/* --- Responsive Utilities & Fixes --- */
+@media (max-width: 575.98px) {
+  html, body {
+    font-size: 15px;
+  }
+  .container, .container-fluid {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  h1, .display-4, .display-5 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.4rem !important;
+  }
+  h3, h4, h5 {
+    font-size: 1.1rem !important;
+  }
+  .navbar .navbar-brand {
+    font-size: 1.2rem !important;
+  }
+  .navbar .navbar-brand img {
+    height: 38px !important;
+    width: 80px !important;
+  }
+  .footer .container, .site-footer .container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .carousel-caption {
+    left: 2% !important;
+    right: 2% !important;
+    bottom: 6% !important;
+    padding: 0.5rem 0.7rem !important;
+  }
+  .carousel-caption h2, .carousel-caption .display-5 {
+    font-size: 1.2rem !important;
+  }
+  .carousel-caption p, .carousel-caption .lead {
+    font-size: 0.95rem !important;
+  }
+  .btn, .btn-main, .btn-contact-index {
+    font-size: 1rem !important;
+    padding: 0.5rem 1.1rem !important;
+  }
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .card.h-100.shadow-sm {
+    min-width: 90px !important;
+    min-height: 90px !important;
+    border-radius: 50% !important;
+    font-size: 0.95rem !important;
+  }
+  .industry-box {
+    min-height: 90px !important;
+    font-size: 0.95rem !important;
+  }
+  .industry-circle {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1rem !important;
+  }
+  .testimonial-card img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .contact-form {
+    padding: 1rem !important;
+  }
+}
+@media (max-width: 400px) {
+  .navbar .navbar-brand img {
+    width: 60px !important;
+    height: 28px !important;
+  }
+  .navbar .navbar-brand {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Remove border-radius from specific Success Stories cards */
+.card.h-100.border-0.shadow-sm.align-items-center {
+  border-radius: 0 !important;
 }

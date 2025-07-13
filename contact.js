@@ -1,4 +1,4 @@
-/ Place this script at the bottom of your HTML (before </body>) or in a JS file
+// Place this script at the bottom of your HTML (before </body>) or in a JS file
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.getElementById('contactForm');
   const thankYou = document.getElementById('thankYouMessage');

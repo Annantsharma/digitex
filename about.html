@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immentrix | About Us</title>
+    <title>Immentrix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar navbar-dark py-1" style="background: linear-gradient(90deg, #232b38 60%, #00bcd4 100%) !important; box-shadow: 0 2px 12px rgba(35,43,56,0.18); min-height:70px;">
-    <div class="container align-items-end d-flex justify-content-start" style="min-height:70px;">
-      <button class="navbar-toggler me-3" type="button" id="customNavToggler" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand fw-bold d-flex align-items-end" href="index.html" style="font-size:2.1rem; height:70px;">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(90deg, #232b38 60%, #00bcd4 100%) !important; box-shadow: 0 2px 12px rgba(35,43,56,0.18);">
+    <div class="container">
+       <a class="navbar-brand fw-bold d-flex align-items-end" href="index.html" style="font-size:2.1rem; height:70px;">
         <img src="images/logo.png" alt="Immentrix Logo" style="height:64px;width:140px;object-fit:contain;display:inline-block;vertical-align:bottom; margin-bottom:0;">
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">Who we are</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">What we do</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">Who We are</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">What We do</a></li>
+          <li class="nav-item"><a class="nav-link" href="vision.html">What We think</a></li>
+          <li class="nav-item"><a class="nav-link" href="newsroom.html">Newsroom</a></li>
           <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
           <li class="nav-item"><a class="nav-link" href="insights.html">Insights</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="career.html">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
   </nav>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var toggler = document.getElementById('customNavToggler');
       var nav = document.getElementById('mainNav');
-      toggler.addEventListener('click', function() {
-        nav.classList.toggle('show');
-      });
-      // Optional: Hide menu when clicking outside
       document.addEventListener('click', function(e) {
-        if (!nav.contains(e.target) && !toggler.contains(e.target)) {
+        if (!nav.contains(e.target)) {
           nav.classList.remove('show');
         }
       });
@@ -82,9 +80,9 @@
       </div>
     </div>
   </section>
-  <footer class="py-3 text-center text-secondary bg-white small">
-    <div class="container">
-      &copy; 2025 Immentrix. All rights reserved.
+  <footer class="py-4 bg-dark text-white mt-5">
+    <div class="container text-center">
+      <div class="small">&copy; 2025 Immentrix. All rights reserved.</div>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
