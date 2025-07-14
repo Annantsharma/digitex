@@ -1,4 +1,4 @@
-/* General */ 
+/* General */
 body {
   background: #f4f7fa;
   color: #232b38;
@@ -118,6 +118,241 @@ body {
   }
   .navbar .container {
     min-height: 80px !important;
+  }
+}
+
+/* --- Mobile Navbar: Fix Logo and Toggle Position, Only Expand Tabs --- */
+@media (max-width: 991.98px) {
+  .navbar .container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 64px !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: relative;
+  }
+  .navbar .navbar-brand {
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 64px !important;
+    flex: 0 0 auto;
+    z-index: 1100;
+  }
+  .navbar .navbar-brand img {
+    height: 54px !important;
+    width: 120px !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    display: block;
+  }
+  .navbar-toggler {
+    align-self: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: 54px !important;
+    display: flex !important;
+    align-items: center !important;
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem;
+    z-index: 1101;
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: #232b38;
+    box-shadow: 0 2px 12px rgba(35,43,56,0.08);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 0;
+    z-index: 1099;
+    transition: max-height 0.3s ease;
+  }
+  .navbar-nav {
+    display: none;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    padding: 1rem 1.2rem !important;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .navbar-nav.show {
+    display: flex !important;
+  }
+}
+
+/* --- Mobile Navbar: Fix Logo Position When Tabs Expand --- */
+@media (max-width: 991.98px) {
+  .navbar .container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 64px !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: relative;
+  }
+  .navbar .navbar-brand {
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 64px !important;
+    flex: 0 0 auto;
+    z-index: 1100;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+  }
+  .navbar .navbar-brand img {
+    height: 54px !important;
+    width: 120px !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    display: block;
+  }
+  .navbar-toggler {
+    align-self: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: 54px !important;
+    display: flex !important;
+    align-items: center !important;
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem;
+    z-index: 1101;
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: #232b38;
+    box-shadow: 0 2px 12px rgba(35,43,56,0.08);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 0;
+    z-index: 1099;
+    transition: max-height 0.3s ease;
+  }
+  .navbar-nav {
+    display: none;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    padding: 1rem 1.2rem !important;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .navbar-nav.show {
+    display: flex !important;
+  }
+}
+
+/* --- iPad Navbar: Open Tabs Same as Mobile View --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar .container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 64px !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: relative;
+  }
+  .navbar .navbar-brand {
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 64px !important;
+    flex: 0 0 auto;
+    z-index: 1100;
+  }
+  .navbar .navbar-brand img {
+    height: 54px !important;
+    width: 120px !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    display: block;
+  }
+  .navbar-toggler {
+    align-self: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: 54px !important;
+    display: flex !important;
+    align-items: center !important;
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem;
+    z-index: 1101;
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: #232b38;
+    box-shadow: 0 2px 12px rgba(35,43,56,0.08);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 0;
+    z-index: 1099;
+    transition: max-height 0.3s ease;
+  }
+  .navbar-nav {
+    display: none;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    padding: 1rem 1.2rem !important;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .navbar-nav.show {
+    display: flex !important;
+  }
+}
+
+/* --- iPad Navbar: Fix Toggle for Tabs (Bootstrap Default) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-collapse {
+    display: block !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: #232b38;
+    box-shadow: 0 2px 12px rgba(35,43,56,0.08);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 0;
+    z-index: 1099;
+    transition: max-height 0.3s ease;
+  }
+  .navbar-collapse.collapse:not(.show) {
+    display: none !important;
+  }
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    padding: 1rem 1.2rem !important;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
   }
 }
 
@@ -377,20 +612,21 @@ body {
     padding: 0;
   }
 }
-@media (min-width: 992px) {
+
+/* --- Mobile Navbar: Add Top Margin to Tabs (Match iPad) --- */
+@media (max-width: 991.98px) {
   .navbar-nav {
-    position: static;
-    width: auto;
-    background: rgba(255,255,255,0.07);
-    border-radius: 2.5rem;
-    box-shadow: 0 2px 12px rgba(35,43,56,0.04);
-    padding: 0.3rem 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    display: flex;
+    margin-top: 4.0rem !important;
+  }
+}
+
+/* --- iPad Navbar: Tabs Only Open/Close on Toggle Click --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-nav {
+    display: none !important;
+  }
+  .navbar-nav.show {
+    display: flex !important;
   }
 }
 
@@ -690,4 +926,44 @@ body {
   letter-spacing: inherit !important;
   line-height: inherit !important;
   margin-bottom: 0.7rem;
+}
+
+/* --- iPad Carousel Size Reduction --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .carousel-item img {
+    height: 450px !important;
+    min-height: 120px !important;
+    max-height: 450px !important;
+    object-fit: cover !important;
+    border-radius: 1.2rem !important;
+  }
+  .carousel-inner {
+    border-radius: 1.2rem !important;
+  }
+  .hero-section {
+    min-height: unset !important;
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+  }
+}
+
+/* --- iPad Navbar: Remove conflicting always-show rules, use Bootstrap collapse only --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-collapse.show {
+    display: block !important;
+  }
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    padding: 1rem 1.2rem !important;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
 }
