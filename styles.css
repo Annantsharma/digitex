@@ -15,7 +15,12 @@ body {
   color: #36d0d2 !important;
   font-weight: 700;
   letter-spacing: 1px;
-  font-size: 1.5rem;
+  font-size: 2.1rem !important;
+  height: 70px !important;
+}
+.navbar .navbar-brand img {
+  height: 64px !important;
+  width: 140px !important;
 }
 .navbar .nav-link {
   color: #fff !important;
@@ -55,7 +60,9 @@ body {
 }
 .navbar .container {
   align-items: center !important;
-  min-height: 70px;
+  min-height: 70px !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
 }
 .navbar-toggler {
   align-self: center !important;
@@ -72,10 +79,45 @@ body {
   padding-bottom: 0 !important;
 }
 @media (max-width: 600px) {
-  .navbar-nav {
-    width: 70vw;
-    min-width: 120px;
-    max-width: 95vw;
+  .navbar .navbar-brand img {
+    height: 54px !important;
+    width: 120px !important;
+  }
+}
+@media (max-width: 400px) {
+  .navbar .navbar-brand img {
+    height: 44px !important;
+    width: 100px !important;
+  }
+}
+@media (max-width: 350px) {
+  .navbar .navbar-brand img {
+    height: 38px !important;
+    width: 80px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar .navbar-brand img {
+    height: 80px !important;
+    width: 180px !important;
+    max-width: 80vw !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    display: block;
+  }
+  .navbar .navbar-brand {
+    height: 80px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .navbar-toggler {
+    height: 64px !important;
+    align-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .navbar .container {
+    min-height: 80px !important;
   }
 }
 
@@ -543,8 +585,8 @@ body {
 }
 @media (max-width: 400px) {
   .navbar .navbar-brand img {
-    width: 60px !important;
-    height: 28px !important;
+           width: 120px !important;
+        height: 50px !important;
   }
   .navbar .navbar-brand {
     font-size: 0.9rem !important;
@@ -554,4 +596,98 @@ body {
 /* Remove border-radius from specific Success Stories cards */
 .card.h-100.border-0.shadow-sm.align-items-center {
   border-radius: 0 !important;
+}
+
+/* Remove all right space for carousel */
+#heroCarousel {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+}
+@media (min-width: 768px) {
+  #heroCarousel {
+    margin-right: 0 !important;
+  }
+}
+
+/* About page image and overlay styles */
+.about-image-container {
+  width: 100%;
+  max-width: 1600px;
+  border-radius: 0;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+}
+.about-image {
+  height: 520px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+.about-image-overlay {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  text-align: left;
+  z-index: 2;
+  width: 50%;
+  min-width: 320px;
+}
+.about-image-title {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px #232b38;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+.about-image-line {
+  height: 0.5px;
+  border: none;
+  border-top: 0.5px solid #fff;
+  margin: 0;
+  opacity: 0.8;
+  width: 100%;
+}
+.about-image-subtitle {
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-top: 0.5rem;
+  text-shadow: 0 2px 8px #232b38;
+  background: none;
+  display: block;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  font-family: 'Segoe Script', 'Brush Script MT', Arial, Helvetica, sans-serif, sans-serif;
+  font-style: normal;
+}
+.about-main-content {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif !important;
+  font-size: 1.18rem;
+  color: #232b38;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.about-main-content p, .about-main-content .lead, .about-main-content .text-secondary {
+  font-family: inherit !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: inherit !important;
+  line-height: inherit !important;
+  margin-bottom: 0.7rem;
 }
