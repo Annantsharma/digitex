@@ -967,3 +967,15 @@ body {
     border-radius: 0;
   }
 }
+
+/* --- iPad Air Landscape: Reduce Navbar Font Size for Single-Line Tabs --- */
+@media (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) {
+  #mainNav .nav-link {
+    font-size: 0.95rem !important;
+    
+    white-space: nowrap !important;
+  }
+  #mainNav .nav-item {
+    margin-bottom: 0 !important;
+  }
+}
