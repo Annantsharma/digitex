@@ -10,17 +10,18 @@ body {
 .navbar {
   background: #232b38 !important;
   box-shadow: 0 2px 12px rgba(35,43,56,0.08);
+  min-height: 54px !important;
 }
 .navbar .navbar-brand {
   color: #36d0d2 !important;
   font-weight: 700;
   letter-spacing: 1px;
-  font-size: 2.1rem !important;
-  height: 70px !important;
+  font-size: 1.7rem !important;
+  height: 54px !important;
 }
 .navbar .navbar-brand img {
-  height: 64px !important;
-  width: 140px !important;
+  height: 48px !important;
+  width: 110px !important;
 }
 .navbar .nav-link {
   color: #fff !important;
