@@ -932,15 +932,16 @@ body {
 }
 
 /* --- CSS for services.html page --- */
-.immentrix-services h1, .immentrix-services h2, .immentrix-services h3 , .immentrix-vision h1, .immentrix-vision h2, .immentrix-vision h3 , .immentrix-insights h1, .immentrix-insights h2, .immentrix-insights h3 , .immentrix-newsroom h1, .immentrix-newsroom h2, .immentrix-newsroom h3  {
+.immentrix-services h1, .immentrix-services h2, .immentrix-services h3 , .immentrix-vision h1, .immentrix-vision h2, .immentrix-vision h3 , .immentrix-insights h1, .immentrix-insights h2, .immentrix-insights h3 , .immentrix-newsroom h1,
+ .immentrix-newsroom h2, .immentrix-newsroom h3,.immentrix-industries h1, .immentrix-industries h2, .immentrix-industries h3 {
     color: #003366;
 }
-.immentrix-services h1 , .immentrix-vision h1 , .immentrix-newsroom h1 , .immentrix-insights h1 {
+.immentrix-services h1 , .immentrix-vision h1 , .immentrix-newsroom h1 , .immentrix-insights h1 , .immentrix-industries h1 {
     text-align: center;
     margin-bottom: 25px;
     margin-top: 15px;
 }
-.immentrix-services section , .immentrix-vision section , .immentrix-insights section {
+.immentrix-services section , .immentrix-vision section , .immentrix-insights section   {
     margin-bottom: 50px;
 }
 .immentrix-services ul , .immentrix-vision ul , .immentrix-insights ul {
@@ -1080,4 +1081,37 @@ body {
 .insights-cta p {
   font-size: 1.1rem;
   color: #5a6a7a;
+}
+
+/* --- CSS for industries.html page --- */
+.immentrix-industries .industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.immentrix-industries .industry-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+}
+.immentrix-industries .industry-card:hover {
+  transform: translateY(-5px);
+}
+.immentrix-industries .industry-card img {
+  width: 100%;
+  border-radius: 6px;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.immentrix-industries .industry-card h3 {
+  color: #102a43;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+.immentrix-industries .industry-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
