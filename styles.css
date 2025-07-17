@@ -179,20 +179,7 @@ body {
 }
 
 /* Main Button */
-.btn-main {
-  background: #3ad3dc !important;
-  color: #232b38 !important;
-  border: 2px solid #3ad3dc !important;
-  border-radius: 2rem;
-  font-weight: 600;
-  transition: box-shadow 0.2s, color 0.2s, background 0.2s;
-}
-.btn-main:hover, .btn-main:focus {
-  background: #3ad3dc !important;
-  color: #232b38 !important;
-  border-color: #3ad3dc !important;
-  box-shadow: 0 6px 20px rgba(58,211,220,0.13);
-}
+
 
 .bg-gradient{
   background-image: none !important;
@@ -319,6 +306,34 @@ body {
   color: #232b38 !important;
   font-weight: 600;
 }
+.text-linkedin { color: #0a66c2; }
+.text-twitter { color: #1da1f2; }
+.text-facebook { color: #1877f3; }
+.contact-form .btn-main , .lets-connect {
+  background: #003366;
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.contact-form .btn-main:hover , .lets-connect:hover {
+  background: #0055aa;
+  color: #fff;
+}
+.contact-form input, .contact-form textarea {
+  border-radius: 0.7rem;
+  border: 1.5px solid #e6eaf0;
+  background: #f8fafc;
+  color: #232b38;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 0 2px #00bcd43a;
+}
+.contact-form label {
+  font-size: 1.05rem;
+}
 
 /* Team images */
 #team img {
@@ -444,19 +459,17 @@ body {
 
 /* View All Industries Button */
 #viewAllIndustries {
-  background: #3ad3dc !important;
-  color: #232b38 !important;
-  border: 2px solid #3ad3dc !important;
+  background: #003366 !important;
+  color: #fff !important;
+  border: 2px solid #003366 !important;
   font-weight: 700;
   border-radius: 2rem;
-  box-shadow: 0 2px 12px rgba(58,211,220,0.10);
+  box-shadow: 0 2px 12px rgba(0,51,102,0.10);
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 #viewAllIndustries:hover, #viewAllIndustries:focus {
-  background: #36d0d2 !important;
-  color: #232b38 !important;
-  border-color: #36d0d2 !important;
-  box-shadow: 0 6px 20px rgba(58,211,220,0.13);
+  background: #0055aa !important;
+  color: #fff !important;
 }
 
 /* Star background animation (moved from index.html) */
@@ -474,7 +487,7 @@ body {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: radial-gradient(circle, #00bcd4 60%, #232b38 100%);
+  background: radial-gradient(circle, #003366 60%, #003366 100%) !important;
   border-radius: 50%;
   opacity: 0.7;
   animation: flyStarCircle linear infinite;
@@ -741,7 +754,7 @@ body {
 .about-main-content h4,
 .about-main-content h5,
 .about-main-content h6 {
-  color: #00bcd4 !important;
+  color: #003366 !important;
 }
 
 /* --- iPad Carousel Size Reduction --- */
@@ -919,25 +932,25 @@ body {
 }
 
 /* --- CSS for services.html page --- */
-.immentrix-services h1, .immentrix-services h2, .immentrix-services h3 , .immentrix-vision h1, .immentrix-vision h2, .immentrix-vision h3 {
+.immentrix-services h1, .immentrix-services h2, .immentrix-services h3 , .immentrix-vision h1, .immentrix-vision h2, .immentrix-vision h3 , .immentrix-insights h1, .immentrix-insights h2, .immentrix-insights h3 , .immentrix-newsroom h1, .immentrix-newsroom h2, .immentrix-newsroom h3  {
     color: #003366;
 }
-.immentrix-services h1 , .immentrix-vision h1 , .immentrix-newsroom h1 {
+.immentrix-services h1 , .immentrix-vision h1 , .immentrix-newsroom h1 , .immentrix-insights h1 {
     text-align: center;
     margin-bottom: 25px;
     margin-top: 15px;
 }
-.immentrix-services section , .immentrix-vision section {
+.immentrix-services section , .immentrix-vision section , .immentrix-insights section {
     margin-bottom: 50px;
 }
-.immentrix-services ul , .immentrix-vision ul {
+.immentrix-services ul , .immentrix-vision ul , .immentrix-insights ul {
     padding-left: 20px;
 }
-.immentrix-services .cta , .immentrix-vision .cta {
+.immentrix-services .cta , .immentrix-vision .cta , .immentrix-newsroom .cta {
     text-align: center;
     margin-top: 60px;
 }
-.immentrix-services .cta a , .immentrix-vision .cta a , .immentrix-newsroom .cta a {
+.immentrix-services .cta a , .immentrix-vision .cta a , .immentrix-newsroom .cta a, .immentrix-insights .cta a {
     display: inline-block;
     background-color: #003366;
     color: white;
@@ -945,7 +958,7 @@ body {
     text-decoration: none;
     border-radius: 4px;
 }
-.immentrix-services .cta a:hover , .immentrix-vision .cta a:hover,.immentrix-newsroom .cta a:hover {
+.immentrix-services .cta a:hover , .immentrix-vision .cta a:hover,.immentrix-newsroom .cta a:hover , .immentrix-insights .cta a:hover {
     background-color: #0055aa;
 }
 .vision-quote {
@@ -1025,7 +1038,46 @@ body {
   color: #5a6a7a !important;
   margin-bottom: 1.0rem !important;
 }
-.newsroom-cta .btn-primary {
-  padding: 0.6rem 1.6rem;
-  font-size: 1rem;
+
+.immentrix-contact {
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+ .immentrix-insights .image-block {
+      margin: 30px 0;
+      text-align: center;
+    }
+    .immentrix-insights .image-block img {
+      max-width: 70%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+/* Improved Insights CTA Styles */
+.insights-cta {
+  background: #fff;
+  border: 1.5px solid #e6eaf0;
+  box-shadow: 0 4px 24px rgba(0,188,212,0.07);
+  text-align: center;
+}
+.insights-cta .btn-main {
+  background: #003366;
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.insights-cta .btn-main:hover {
+  background: #0055aa;
+  color: #fff;
+}
+.insights-cta h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #232b38 ;
+}
+.insights-cta p {
+  font-size: 1.1rem;
+  color: #5a6a7a;
 }
