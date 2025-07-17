@@ -495,9 +495,9 @@ body {
 
 /* Oval 'Our Capabilities' Boxes */
 .card.h-100.shadow-sm {
-  border-radius: 50% !important;
-  aspect-ratio: 1/1;
-  min-width: 180px;
+  border-radius: 1.2rem !important; /* Rectangular with rounded corners */
+  aspect-ratio: unset !important;
+  min-width: 220px;
   min-height: 180px;
   background: linear-gradient(135deg, #e0f7fa 60%, #f8fafc 100%);
   display: flex;
@@ -510,15 +510,9 @@ body {
   .card.h-100.shadow-sm {
     min-width: 120px;
     min-height: 120px;
-    border-radius: 50% !important;
+    border-radius: 1.2rem !important;
+    aspect-ratio: unset !important;
   }
-}
-.card.h-100.shadow-sm .card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
 }
 
 /* Success Stories Images */
@@ -740,6 +734,16 @@ body {
   margin-bottom: 0.7rem;
 }
 
+/* --- About Us Page: Change Heading Color --- */
+.about-main-content h1,
+.about-main-content h2,
+.about-main-content h3,
+.about-main-content h4,
+.about-main-content h5,
+.about-main-content h6 {
+  color: #00bcd4 !important;
+}
+
 /* --- iPad Carousel Size Reduction --- */
 @media (min-width: 768px) and (max-width: 1024px) {
   .carousel-item img {
@@ -912,4 +916,34 @@ body {
     box-sizing: border-box !important;
     border-radius: 0 0 1.5rem 1.5rem !important;
   }
+}
+
+/* --- CSS for services.html page --- */
+.immentrix-services h1, .immentrix-services h2, .immentrix-services h3 {
+    color: #003366;
+}
+.immentrix-services h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.immentrix-services section {
+    margin-bottom: 50px;
+}
+.immentrix-services ul {
+    padding-left: 20px;
+}
+.immentrix-services .cta {
+    text-align: center;
+    margin-top: 60px;
+}
+.immentrix-services .cta a {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.immentrix-services .cta a:hover {
+    background-color: #0055aa;
 }
