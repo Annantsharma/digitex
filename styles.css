@@ -922,9 +922,9 @@ body {
 .immentrix-services h1, .immentrix-services h2, .immentrix-services h3 , .immentrix-vision h1, .immentrix-vision h2, .immentrix-vision h3 {
     color: #003366;
 }
-.immentrix-services h1 , .immentrix-vision h1 {
+.immentrix-services h1 , .immentrix-vision h1 , .immentrix-newsroom h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     margin-top: 15px;
 }
 .immentrix-services section , .immentrix-vision section {
@@ -937,7 +937,7 @@ body {
     text-align: center;
     margin-top: 60px;
 }
-.immentrix-services .cta a , .immentrix-vision .cta a {
+.immentrix-services .cta a , .immentrix-vision .cta a , .immentrix-newsroom .cta a {
     display: inline-block;
     background-color: #003366;
     color: white;
@@ -945,7 +945,7 @@ body {
     text-decoration: none;
     border-radius: 4px;
 }
-.immentrix-services .cta a:hover , .immentrix-vision .cta a:hover {
+.immentrix-services .cta a:hover , .immentrix-vision .cta a:hover,.immentrix-newsroom .cta a:hover {
     background-color: #0055aa;
 }
 .vision-quote {
@@ -953,4 +953,79 @@ body {
   border-left: 6px solid #00bcd4;
   font-style: italic;
   color: #003366;
+}
+
+/* Newsroom Styles */
+.immentrix-newsroom .subheading {
+  font-size: 1.2rem;
+  color: #5a6a7a;
+}
+.immentrix-newsroom .news-card {
+  background: #fff;
+  border: 1px solid #e6eaf0;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.immentrix-newsroom .news-card:hover {
+  box-shadow: 0 6px 32px rgba(0,188,212,0.10);
+  transform: translateY(-6px) scale(1.01);
+}
+.immentrix-newsroom .news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.immentrix-newsroom .news-card-content {
+  padding: 1.3rem 1.2rem 1.2rem 1.2rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.immentrix-newsroom .news-date {
+  font-size: 0.95rem;
+  color: #232b38;
+  margin-bottom: 0.2rem;
+}
+.immentrix-newsroom .news-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.7rem 0;
+  color: #003366;
+}
+.immentrix-newsroom .news-summary {
+  font-size: 1rem;
+  color: #444;
+  flex: 1 1 auto;
+}
+
+
+/* Improved Newsroom CTA Styles */
+.newsroom-cta {
+  background: #fff;
+  border: 1.5px solid #e6eaf0;
+  box-shadow: 0 4px 24px rgba(0,188,212,0.07);
+  text-align: center;
+  padding: 1rem 0.5rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.newsroom-cta h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #232b38 !important;
+  margin-bottom: 0.5rem !important;
+}
+.newsroom-cta p {
+  font-size: 1rem;
+  color: #5a6a7a !important;
+  margin-bottom: 1.0rem !important;
+}
+.newsroom-cta .btn-primary {
+  padding: 0.6rem 1.6rem;
+  font-size: 1rem;
 }
