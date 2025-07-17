@@ -312,7 +312,7 @@ body {
 
 /* Contact Form */
 .contact-form {
-  border: 1.5px solid #f6d6f6;
+  border:0.5px solid #232b38;
   background: rgba(255, 255, 255, 0.93);
 }
 .contact-form .form-label {
@@ -919,24 +919,25 @@ body {
 }
 
 /* --- CSS for services.html page --- */
-.immentrix-services h1, .immentrix-services h2, .immentrix-services h3 {
+.immentrix-services h1, .immentrix-services h2, .immentrix-services h3 , .immentrix-vision h1, .immentrix-vision h2, .immentrix-vision h3 {
     color: #003366;
 }
-.immentrix-services h1 {
+.immentrix-services h1 , .immentrix-vision h1 {
     text-align: center;
     margin-bottom: 40px;
+    margin-top: 15px;
 }
-.immentrix-services section {
+.immentrix-services section , .immentrix-vision section {
     margin-bottom: 50px;
 }
-.immentrix-services ul {
+.immentrix-services ul , .immentrix-vision ul {
     padding-left: 20px;
 }
-.immentrix-services .cta {
+.immentrix-services .cta , .immentrix-vision .cta {
     text-align: center;
     margin-top: 60px;
 }
-.immentrix-services .cta a {
+.immentrix-services .cta a , .immentrix-vision .cta a {
     display: inline-block;
     background-color: #003366;
     color: white;
@@ -944,6 +945,12 @@ body {
     text-decoration: none;
     border-radius: 4px;
 }
-.immentrix-services .cta a:hover {
+.immentrix-services .cta a:hover , .immentrix-vision .cta a:hover {
     background-color: #0055aa;
+}
+.vision-quote {
+  background: linear-gradient(90deg, #f6fff8 60%, #fff3f8 100%);
+  border-left: 6px solid #00bcd4;
+  font-style: italic;
+  color: #003366;
 }
